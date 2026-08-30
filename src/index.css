@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "LINE Seed JP", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
