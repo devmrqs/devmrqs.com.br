@@ -1,9 +1,9 @@
 import { usePageTitle } from "../hooks/usePageTitle";
 
 const Home = () => {
-  usePageTitle("Angelo Ferreira");
+  usePageTitle("Ângelo Ferreira | Front-end Developer & Designer");
 
-  return <div></div>;
+  return <div>Home</div>;
 };
 
 export default Home;

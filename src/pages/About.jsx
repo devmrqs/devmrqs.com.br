@@ -1,7 +1,7 @@
 import { usePageTitle } from "../hooks/usePageTitle";
 
 const About = () => {
-  usePageTitle("About | Angelo Ferreira");
+  usePageTitle("Ângelo Ferreira | About");
 
   return <div>About</div>;
 };
