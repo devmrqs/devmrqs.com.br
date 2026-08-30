@@ -1,9 +1,11 @@
 @import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 @theme {
-  --font-sans: "LINE Seed JP", sans-serif;
+  --font-sans: "Quicksand", sans-serif;
 }
 
 body {
   font-family: var(--font-sans);
+  background-color: #808b72;
 }
