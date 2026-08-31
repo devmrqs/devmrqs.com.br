@@ -1,11 +1,18 @@
 @import "tailwindcss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Quicksand", sans-serif;
 }
 
+::selection {
+  background-color: #1d1d1d;
+  color: white;
+}
+
 body {
   font-family: var(--font-sans);
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(248, 248, 248);
 }
