@@ -1,5 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 
+// Styles
+import {
+  themeButtonClasses,
+  dropdownContainerClasses,
+} from "../styles/sharedClasses";
+
 const LanguageSwitcher = () => {
   const [open, setOpen] = useState(false);
   const [language, setLanguage] = useState("pt");
@@ -35,9 +41,9 @@ const LanguageSwitcher = () => {
       ></i>
 
       {open && (
-        <div className="absolute top-full right-0 mt-2.5 bg-white border-[0.5px] border-[rgba(0,0,0,0.1)] rounded-xl shadow-md flex flex-col overflow-hidden w-36 z-50 py-2 px-1.5">
+        <div className={dropdownContainerClasses}>
           <button
-            className="w-full flex items-center justify-between px-4 py-2 text-base hover:bg-[rgba(0,0,0,0.05)] hover:rounded-full duration-300"
+            className={`${themeButtonClasses}`}
             onClick={() => handleSelect("en")}
           >
             <span>English</span>
@@ -46,7 +52,7 @@ const LanguageSwitcher = () => {
             )}
           </button>
           <button
-            className="w-full flex items-center justify-between px-4 py-2 text-base hover:bg-[rgba(0,0,0,0.05)] hover:rounded-full duration-300"
+            className={themeButtonClasses}
             onClick={() => handleSelect("pt")}
           >
             <span>Português</span>

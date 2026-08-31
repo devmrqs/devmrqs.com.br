@@ -1,4 +1,9 @@
 import { NavLink } from "react-router-dom";
+
+// Styles
+import { shadowBox, roundButtonClasses } from "../styles/sharedClasses";
+
+// Components
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
 
@@ -11,7 +16,9 @@ const Navbar = () => {
   return (
     <div className="flex flex-col select-none justify-center items-center">
       <div className="flex flex-row mt-20 justify-between items-center gap-2 select-none mb-7">
-        <nav className="bg-white flex justify-between items-center gap-4 rounded-full p-2.5 w-2xl border-[0.5px] border-[rgba(0,0,0,0.1)] text-[rgba(0,0,0,0.6)]">
+        <nav
+          className={`bg-white flex justify-between items-center gap-4 rounded-full p-2.5 w-2xl text-[rgba(0,0,0,0.6)] ${shadowBox}`}
+        >
           <div className="flex gap-3 font-semibold ml-1 text-base justify-center items-center">
             <NavLink to="/" className={linkClasses}>
               Início
@@ -32,12 +39,12 @@ const Navbar = () => {
           href="https://www.linkedin.com/in/devmrqs/"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[rgba(255,255,255,0.3)] px-4 py-2.5 border-[0.5px] border-[rgba(0,0,0,0.08)] text-[rgb(0,0,0,0.8)] text-base rounded-full hover:scale-110 hover:bg-white duration-500 font-bold"
+          className={roundButtonClasses}
         >
           In
         </a>
         <a
-          className="bi bi-github bg-[rgba(255,255,255,0.3)] px-3.5 py-2.5 border-[0.5px] border-[rgba(0,0,0,0.08)] text-[rgb(0,0,0,0.8)] text-base rounded-full hover:scale-110 hover:bg-white duration-500 font-bold"
+          className={`bi bi-github ${roundButtonClasses}`}
           href="https://github.com/devmrqs"
           target="_blank"
           rel="noopener noreferrer"
