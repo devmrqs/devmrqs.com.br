@@ -23,7 +23,7 @@ const Home = () => {
         <p className="text-[14.5px] font-semibold text-blackVLO">
           Meu foco hoje é desenvolvimento web, trabalhando com{" "}
           <span className="italic">
-            JavaScript, React, Node.js, Vite, GSAP e Tailwind CSS.
+            JavaScript, React, Node.js, GSAP e Tailwind CSS.
           </span>
         </p>
         <p className="text-[14.5px] font-semibold text-blackVLO">
