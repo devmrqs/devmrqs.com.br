@@ -5,6 +5,12 @@
 
 @theme {
   --font-sans: "Quicksand", sans-serif;
+
+  /* Colors */
+  --color-mossLO: rgb(135, 150, 118, 0.3); /* Moss Low Opacity */
+  --color-blackLO: rgba(0, 0, 0, 0.8); /* Black Low Opacity */
+  --color-blackVLO: rgba(0, 0, 0, 0.6); /* Black Very Low Opacity */
+  --color-blackLine: rgba(0, 0, 0, 0.1); /* Black Line */
 }
 
 ::selection {

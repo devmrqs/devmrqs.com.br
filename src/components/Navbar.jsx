@@ -10,14 +10,14 @@ import ThemeSwitcher from "./ThemeSwitcher";
 const Navbar = () => {
   const linkClasses = ({ isActive }) =>
     isActive
-      ? "bg-[rgb(135,150,118,0.25)] px-5 py-1.5 -my-2 rounded-full duration-500 text-[rgba(0,0,0,0.8)]"
-      : "px-3 py-2 -my-2 rounded-full hover:text-[rgba(0,0,0,0.8)] duration-500";
+      ? "bg-mossLO px-5 py-1.5 -my-2 rounded-full duration-500 text-blackLO"
+      : "px-3 py-2 -my-2 rounded-full duration-500";
 
   return (
     <div className="flex flex-col select-none justify-center items-center">
-      <div className="flex flex-row mt-20 justify-between items-center gap-2 select-none mb-7">
+      <div className="flex flex-row mt-20 justify-between items-center gap-2 mb-7">
         <nav
-          className={`bg-white flex justify-between items-center gap-4 rounded-full p-2.5 w-2xl text-[rgba(0,0,0,0.6)] ${shadowBox}`}
+          className={`bg-white flex justify-between items-center gap-4 rounded-2xl p-2.5 w-2xl text-blackVLO ${shadowBox}`}
         >
           <div className="flex gap-3 font-semibold ml-1 text-base justify-center items-center">
             <NavLink to="/" className={linkClasses}>
@@ -50,7 +50,7 @@ const Navbar = () => {
           rel="noopener noreferrer"
         ></a>
       </div>
-      <div className="h-px bg-[rgba(0,0,0,0.1)] w-3xl mb-7"></div>
+      <div className="h-px bg-blackLine w-3xl mb-7"></div>
     </div>
   );
 };

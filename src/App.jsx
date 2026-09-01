@@ -15,11 +15,13 @@ function App() {
       <div className="flex justify-start w-3xl">
         <Header />
       </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-      </Routes>
+      <div className="w-2xl">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+        </Routes>
+      </div>
     </div>
   );
 }
