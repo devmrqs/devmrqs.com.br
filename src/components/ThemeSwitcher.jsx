@@ -50,7 +50,7 @@ const ThemeSwitcher = () => {
   return (
     <div className="relative" ref={containerRef}>
       <i
-        className="bi bi-brightness-high inline-block mr-2.5 text-lg hover:text-[rgba(0,0,0,0.8)] hover:scale-110 duration-500 cursor-pointer"
+        className="bi bi-brightness-high inline-block mr-2.5 text-lg hover:text-blackLO hover:scale-110 duration-500 cursor-pointer"
         onClick={() => setOpen(!open)}
       ></i>
 

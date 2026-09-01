@@ -36,7 +36,7 @@ const LanguageSwitcher = () => {
   return (
     <div className="relative" ref={containerRef}>
       <i
-        className="bi bi-translate inline-block mr-2.5 text-lg hover:text-[rgba(0,0,0,0.8)] hover:scale-110 duration-500 cursor-pointer"
+        className="bi bi-translate inline-block mr-2.5 text-lg hover:text-blackLO hover:scale-110 duration-500 cursor-pointer"
         onClick={() => setOpen(!open)}
       ></i>
 
@@ -48,7 +48,7 @@ const LanguageSwitcher = () => {
           >
             <span>English</span>
             {language === "en" && (
-              <span className="h-2 w-2 rounded-full bg-[rgba(0,0,0,0.5)]"></span>
+              <span className="h-2 w-2 rounded-full bg-blackVLO"></span>
             )}
           </button>
           <button
@@ -57,7 +57,7 @@ const LanguageSwitcher = () => {
           >
             <span>Português</span>
             {language === "pt" && (
-              <span className="h-2 w-2 rounded-full bg-[rgba(0,0,0,0.5)]"></span>
+              <span className="h-2 w-2 rounded-full bg-blackVLO"></span>
             )}
           </button>
         </div>
