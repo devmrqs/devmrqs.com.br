@@ -2,7 +2,7 @@ import SocialLink from "./SocialLink";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col gap-10 select-none">
+    <div className="flex flex-row flex-wrap gap-3 sm:gap-5">
       <div className="flex flex-row gap-5">
         <SocialLink
           href="https://www.linkedin.com/in/devmrqs/"

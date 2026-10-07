@@ -17,7 +17,7 @@ const Portfolio = () => {
           title="Flor da Mata"
           label="Site institucional para distribuidora de produtos naturais"
         />
-        <div className="h-px bg-blackLine w-2xl mb-7 mt-5 select-none"></div>
+        <div className="h-px bg-blackLine w-full mb-7 mt-5 select-none"></div>
       </div>
       <Footer />
     </div>

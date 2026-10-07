@@ -34,7 +34,7 @@ const Home = () => {
             Entre em contato.
           </a>
         </div>
-        <div className="h-px bg-blackLine w-2xl mb-7 mt-5 select-none"></div>
+        <div className="h-px bg-blackLine w-full mb-7 mt-5 select-none"></div>
       </div>
       <Footer />
     </div>
