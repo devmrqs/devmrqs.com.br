@@ -21,7 +21,15 @@ const Header = () => {
             <p className="text-blackVLO text-base">Brasil - RJ</p>
           </div>
           <i className="bi bi-circle-fill text-[3px] text-blackLO mx-5 hidden sm:inline-block"></i>
-          {/* badge "Disponível para trabalhos" igual */}
+          <div className="bg-[rgba(116,187,113,0.2)] flex items-center justify-center gap-2 py-1.5 px-4 rounded-full border-[0.5px] border-[rgb(44,85,62,0.2)] duration-500">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute h-full w-full rounded-full bg-[rgb(62,121,87)] opacity-75"></span>
+              <span className="relative rounded-full h-2.5 w-2.5 bg-[rgb(62,121,87)]"></span>
+            </span>
+            <p className="text-xs text-[rgb(44,85,62)] font-semibold">
+              Disponível para trabalhos
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -20,15 +20,21 @@ const Navbar = () => {
           className={`bg-white flex flex-1 min-w-0 justify-between items-center gap-2 sm:gap-4 rounded-2xl p-2.5 text-blackVLO ${shadowBox}`}
         >
           <div className="flex gap-1 sm:gap-3 font-semibold ml-1 text-sm sm:text-base justify-center items-center">
-            {/* NavLinks iguais */}
+            <NavLink to="/" className={linkClasses}>
+              Início
+            </NavLink>
+            <NavLink to="/about" className={linkClasses}>
+              Sobre mim
+            </NavLink>
+            <NavLink to="/portfolio" className={linkClasses}>
+              Portfólio
+            </NavLink>
           </div>
           <div className="flex flex-row gap-1 sm:gap-3">
             <ThemeSwitcher />
             <LanguageSwitcher />
           </div>
         </nav>
-
-        {/* Esconde os botões redondos no celular */}
         <a
           href="https://www.linkedin.com/in/devmrqs/"
           target="_blank"
