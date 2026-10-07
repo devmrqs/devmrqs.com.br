@@ -17,6 +17,12 @@ const Portfolio = () => {
           title="Flor da Mata"
           label="Site institucional para distribuidora de produtos naturais"
         />
+        <Projects
+          href="https://github.com/devmrqs/miyu"
+          icon="bi-robot"
+          title="Miyu"
+          label="Bot Discord + Dashboard de Gerenciamento"
+        />
         <div className="h-px bg-blackLine w-full mb-7 mt-5 select-none"></div>
       </div>
       <Footer />
