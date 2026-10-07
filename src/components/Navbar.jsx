@@ -7,7 +7,12 @@ import { shadowBox, roundButtonClasses } from "../styles/sharedClasses";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeSwitcher from "./ThemeSwitcher";
 
+// i18n
+import { useLanguage } from "../i18n/useLanguage";
+
 const Navbar = () => {
+  const { t } = useLanguage();
+
   const linkClasses = ({ isActive }) =>
     isActive
       ? "bg-mossLO px-3 sm:px-5 py-1.5 -my-2 rounded-full duration-500 text-blackLO"
@@ -17,17 +22,17 @@ const Navbar = () => {
     <div className="flex flex-col select-none justify-center items-center w-full">
       <div className="flex flex-row mt-8 sm:mt-20 justify-between items-center gap-2 mb-7 w-full max-w-3xl">
         <nav
-          className={`bg-white flex flex-1 min-w-0 justify-between items-center gap-2 sm:gap-4 rounded-2xl p-2.5 text-blackVLO ${shadowBox}`}
+          className={`bg-surface flex flex-1 min-w-0 justify-between items-center gap-2 sm:gap-4 rounded-2xl p-2.5 text-blackVLO ${shadowBox}`}
         >
           <div className="flex gap-1 sm:gap-3 font-semibold ml-1 text-sm sm:text-base justify-center items-center">
             <NavLink to="/" className={linkClasses}>
-              Início
+              {t.nav.home}
             </NavLink>
             <NavLink to="/about" className={linkClasses}>
-              Sobre mim
+              {t.nav.about}
             </NavLink>
             <NavLink to="/portfolio" className={linkClasses}>
-              Portfólio
+              {t.nav.portfolio}
             </NavLink>
           </div>
           <div className="flex flex-row gap-1 sm:gap-3">

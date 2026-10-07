@@ -6,12 +6,16 @@ import {
   dropdownContainerClasses,
 } from "../styles/sharedClasses";
 
+// i18n
+import { useLanguage } from "../i18n/useLanguage";
+
 const ThemeSwitcher = () => {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || "system",
   );
   const containerRef = useRef(null);
+  const { t } = useLanguage();
 
   // Descobre se o SO do usuário prefere dark mode
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -61,21 +65,21 @@ const ThemeSwitcher = () => {
             onClick={() => handleSelect("light")}
           >
             <i className="bi bi-brightness-high-fill"></i>
-            <span>Claro</span>
+            <span>{t.theme.light}</span>
           </button>
           <button
             className={themeButtonClasses}
             onClick={() => handleSelect("dark")}
           >
             <i className="bi bi-moon-fill"></i>
-            <span>Escuro</span>
+            <span>{t.theme.dark}</span>
           </button>
           <button
             className={themeButtonClasses}
             onClick={() => handleSelect("system")}
           >
             <i className="bi bi-laptop"></i>
-            <span>Sistema</span>
+            <span>{t.theme.system}</span>
           </button>
         </div>
       )}

@@ -3,14 +3,35 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
+:root {
+  --bg: rgb(248, 248, 248);
+  --surface: #ffffff;
+  --ink: #000000;
+  --ink-lo: rgba(0, 0, 0, 0.8);
+  --ink-vlo: rgba(0, 0, 0, 0.6);
+  --line: rgba(0, 0, 0, 0.1);
+  --moss: rgb(135, 150, 118, 0.3);
+}
+
+.dark {
+  --bg: rgb(17, 17, 17);
+  --surface: rgb(28, 28, 28);
+  --ink: #ffffff;
+  --ink-lo: rgba(255, 255, 255, 0.85);
+  --ink-vlo: rgba(255, 255, 255, 0.6);
+  --line: rgba(255, 255, 255, 0.12);
+  --moss: rgb(135, 150, 118, 0.35);
+}
+
+@theme inline {
   --font-sans: "Quicksand", sans-serif;
 
-  /* Colors */
-  --color-mossLO: rgb(135, 150, 118, 0.3); /* Moss Low Opacity */
-  --color-blackLO: rgba(0, 0, 0, 0.8); /* Black Low Opacity */
-  --color-blackVLO: rgba(0, 0, 0, 0.6); /* Black Very Low Opacity */
-  --color-blackLine: rgba(0, 0, 0, 0.1); /* Black Line */
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-mossLO: var(--moss);
+  --color-blackLO: var(--ink-lo);
+  --color-blackVLO: var(--ink-vlo);
+  --color-blackLine: var(--line);
 }
 
 ::selection {
@@ -18,7 +39,13 @@
   color: white;
 }
 
+.dark ::selection {
+  background-color: #f0f0f0;
+  color: #111111;
+}
+
 body {
   font-family: var(--font-sans);
-  background-color: rgb(248, 248, 248);
+  background-color: var(--bg);
+  color: var(--ink);
 }

@@ -1,6 +1,9 @@
 import SocialLink from "./SocialLink";
+import { useLanguage } from "../i18n/useLanguage";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="flex flex-col gap-10 select-none">
       <div className="flex flex-row flex-wrap gap-3 sm:gap-5">
@@ -21,7 +24,7 @@ const Footer = () => {
         />
       </div>
       <p className="font-bold text-[10px] sm:text-xs text-blackLO">
-        &copy; 2026 ANGELO M. FERREIRA. TODOS OS DIREITOS RESERVADOS
+        {t.footer.copyright}
       </p>
     </div>
   );

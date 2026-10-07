@@ -6,9 +6,12 @@ import {
   dropdownContainerClasses,
 } from "../styles/sharedClasses";
 
+// i18n
+import { useLanguage } from "../i18n/useLanguage";
+
 const LanguageSwitcher = () => {
   const [open, setOpen] = useState(false);
-  const [language, setLanguage] = useState("pt");
+  const { language, setLanguage } = useLanguage();
   const containerRef = useRef(null);
 
   function handleSelect(lang) {
@@ -43,7 +46,7 @@ const LanguageSwitcher = () => {
       {open && (
         <div className={dropdownContainerClasses}>
           <button
-            className={`${themeButtonClasses}`}
+            className={themeButtonClasses}
             onClick={() => handleSelect("en")}
           >
             <span>English</span>

@@ -1,37 +1,39 @@
 import Footer from "../components/Footer";
 import { usePageTitle } from "../hooks/usePageTitle";
+import { useLanguage } from "../i18n/useLanguage";
 
 const Home = () => {
-  usePageTitle("Ângelo Ferreira | Front-end Developer & Designer");
+  const { t } = useLanguage();
+  usePageTitle(t.pageTitles.home);
 
   return (
     <div>
       <div className="flex flex-col gap-5">
-        <h1 className="text-base font-bold">Prazer, me chamo Ângelo!</h1>
+        <h1 className="text-base font-bold">{t.home.title}</h1>
         <p className="text-[14.5px] font-semibold text-blackVLO">
-          Sou desenvolvedor frontend e com foco em interfaces animadas e
-          interativas, como o rebrand da{" "}
+          {t.home.p1Before}
           <a
             href="https://flordamata.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-black"
+            className="font-bold text-ink"
           >
-            Flor da Mata.
+            {t.home.p1Link}
           </a>
         </p>
         <p className="text-[14.5px] font-semibold text-blackVLO">
-          Meu foco hoje é desenvolvimento web, trabalhando com{" "}
-          <span className="italic">
-            JavaScript, React, Node.js, GSAP e Tailwind CSS.
-          </span>
+          {t.home.p2Before}
+          <span className="italic">{t.home.p2Stack}</span>
         </p>
-        <p className="text-[14.5px] font-semibold text-blackVLO">
-          Atualmente estou disponível para novas oportunidades.
-        </p>
+        <p className="text-[14.5px] font-semibold text-blackVLO">{t.home.p3}</p>
         <div>
-          <a href="" className="font-bold text-black text-[15px] select-none">
-            Entre em contato.
+          <a
+            href="https://www.linkedin.com/in/devmrqs/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-ink text-[15px] select-none"
+          >
+            {t.home.contact}
           </a>
         </div>
         <div className="h-px bg-blackLine w-full mb-7 mt-5 select-none"></div>
