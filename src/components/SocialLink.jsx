@@ -7,7 +7,7 @@ const SocialLink = ({ href, icon, label }) => {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${roundButtonClasses} flex flex-row gap-3`}
+        className={`${roundButtonClasses} flex flex-row gap-3 whitespace-nowrap`}
       >
         <i className={`bi ${icon}`}></i>
         <p>{label}</p>
